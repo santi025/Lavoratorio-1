@@ -1,8 +1,8 @@
 <?php
 
-namespace app\controller;
+namespace app\controllers;
 
-use dataBase\ConexxionDBController;
+use config\ConexxionDBController;
 
 class LoginController
 {
