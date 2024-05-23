@@ -8,7 +8,7 @@ class ConexxionDBController
     private $host = 'localhost';
     private $user = 'root';
     private $pwd = '';
-    private $dataBase = 'facturacion_tienda_db';
+    private $dataBase = 'contactos_db';
     private $conex;
 
     public function __construct()
