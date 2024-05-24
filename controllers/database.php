@@ -1,6 +1,6 @@
 <?php
 
-namespace config;
+namespace app\controllers;
 
 use mysqli;
 
@@ -8,7 +8,7 @@ class ConexxionDBController
 {
     private $host = 'localhost';
     private $user = 'root';
-    private $pwd = ''; // No espacios
+    private $pwd = ''; 
     private $dataBase = 'facturacion_tienda_db';
     public $conex;
 

@@ -2,7 +2,8 @@
 
 namespace app\controllers;
 
-use config\ConexxionDBController;
+
+use controllers\ConexxionDBController;
 
 class LoginController
 {

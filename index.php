@@ -1,11 +1,11 @@
 <?php
 
-require_once '../config/database.php';
-require_once '../app/controllers/LoginController.php';
-require_once '../app/controllers/FacturaController.php';
+require_once 'controllers/database.php';
+require_once 'controllers/LoginController.php';
+require_once 'controllers/FacturaController.php';
 
-use app\controllers\LoginController;
-use app\controllers\FacturaController;
+use controllers\LoginController;
+use controllers\FacturaController;
 
 $action = $_GET['action'] ?? null;
 
@@ -15,8 +15,8 @@ if ($action === 'login') {
     $loginController = new LoginController();
     $loginController->authenticate($username, $password);
 } elseif ($action === 'factura') {
-    // Código para manejar la generación de facturas
+    
 } else {
-    include '../app/views/login.php';
+    include 'views/login.php';
 }
 ?>
