@@ -4,8 +4,8 @@ require_once 'controllers/database.php';
 require_once 'controllers/LoginController.php';
 require_once 'controllers/FacturaController.php';
 
-use controllers\LoginController;
-use controllers\FacturaController;
+use app\controllers\LoginController;
+use app\controllers\FacturaController;
 
 $action = $_GET['action'] ?? null;
 
