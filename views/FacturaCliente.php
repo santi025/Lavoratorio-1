@@ -28,13 +28,14 @@ $productos = $productoController->obtenerProductos();
 </head>
 <body>
     <h2>Productos Disponibles</h2>
+    <h3>Seleccione los productos que va a llevar</h3> 
     <table>
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Precio</th>
-                
+                <th>Seleccionar</th>
             </tr>
         </thead>
         <tbody>
@@ -43,11 +44,15 @@ $productos = $productoController->obtenerProductos();
                 <td><?php echo $producto['id']; ?></td>
                 <td><?php echo $producto['nombre']; ?></td>
                 <td><?php echo $producto['precio']; ?></td>
-                
+                <td>
+                    <button onclick="mostrarDetalles(<?php echo $producto['id']; ?>)">Seleccionar</button>
+                </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+
+    
+  
 </body>
 </html>
-
