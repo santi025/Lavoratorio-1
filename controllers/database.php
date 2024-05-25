@@ -1,6 +1,6 @@
 <?php
 
-namespace config;
+namespace app\controllers;
 
 use mysqli;
 

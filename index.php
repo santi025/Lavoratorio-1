@@ -1,8 +1,8 @@
 <?php
 
-require_once '../config/database.php';
-require_once '../app/controllers/LoginController.php';
-require_once '../app/controllers/FacturaController.php';
+require_once 'controllers/database.php';
+require_once 'controllers/LoginController.php';
+require_once 'controllers/FacturaController.php';
 
 use app\controllers\LoginController;
 
@@ -17,6 +17,6 @@ if ($action === 'login') {
 } elseif ($action === 'factura') {
     
 } else {
-    include '../app/views/login.php';
+    include 'views/login.php';
 }
 ?>

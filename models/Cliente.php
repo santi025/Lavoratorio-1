@@ -11,6 +11,6 @@ class Cliente
     private $telefono;
     private $email;
 
-    // Getters y Setters para cada propiedad
+    
 }
 ?>
