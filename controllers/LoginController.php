@@ -17,7 +17,7 @@ class LoginController
         if ($result->num_rows > 0) {
             session_start();
             $_SESSION["username"] = $username;
-            header("Location: views/FacturaCliente.php");
+            header("Location: views/MenuFacRegBus.php");
             exit;
         } else {
             // echo "Usuario o contraseña incorrectos.";
