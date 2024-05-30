@@ -71,10 +71,10 @@ $productos = $productoController->obtenerProductos();
 
                 <?php foreach ($productos as $producto) : ?>
                     <tr>
-                        <?php if (!empty($_POST['productos' . $producto['id'] ])) : ?>
+                        <?php if (!empty($_POST['productos' . $producto['id']])) : ?>
                             <td> <?php echo $producto['nombre']; ?></td>
                             <td> <?php echo  $producto['precio']; ?></td>
-                            <td> <?php echo  $_POST['productos' . $producto['id'] ]; ?></td>
+                            <td> <?php echo  $_POST['productos' . $producto['id']]; ?></td>
                         <?php endif; ?>
                     </tr>
                 <?php endforeach; ?>
