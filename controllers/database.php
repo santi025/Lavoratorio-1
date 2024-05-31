@@ -14,7 +14,7 @@ class ConexxionDBController
 
     public function __construct()
     {
-        $this->conex = new mysqli($this->host, $this->user, $this->pwd, $this->dataBase);
+        $this-> conex = new mysqli($this->host, $this->user, $this->pwd, $this->dataBase);
         if ($this->conex->connect_error) {
             die('Error en la conexión a la base de datos: ' . $this->conex->connect_error);
         }
@@ -24,5 +24,7 @@ class ConexxionDBController
     {
         $this->conex->close();
     }
+
+   
 }
 ?>
