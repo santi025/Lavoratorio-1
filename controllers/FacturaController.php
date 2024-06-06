@@ -1,8 +1,7 @@
 <?php
 namespace app\controllers;
 
-require_once '../controllers/database.php';
-
+    
 
 class FacturaController
 {
