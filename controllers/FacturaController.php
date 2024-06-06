@@ -1,7 +1,8 @@
 <?php
 namespace app\controllers;
 
-use controllers\ConexxionDBController;
+require_once '../controllers/database.php';
+
 
 class FacturaController
 {

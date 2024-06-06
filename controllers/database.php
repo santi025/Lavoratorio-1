@@ -19,6 +19,22 @@ class ConexxionDBController
             die('Error en la conexión a la base de datos: ' . $this->conex->connect_error);
         }
     }
+    public function insertarCliente($nombreCompleto, $tipoDocumento, $numeroDocumento, $telefono, $email) {
+        $query = "INSERT INTO clientes (nombre, tipo_documento, numero_documento, telefono, email) VALUES ";
+        $stmt = $this->conex->prepare($query);
+
+        if ($stmt === false) {
+            die('Error en la preparación de la consulta: ' . $this->conex->error);
+        }
+
+        $stmt->bind_param('sssss', $nombreCompleto, $tipoDocumento, $numeroDocumento, $telefono, $email);
+
+        if($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public function close()
     {

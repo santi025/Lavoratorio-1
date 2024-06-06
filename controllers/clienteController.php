@@ -1,7 +1,7 @@
 <?php
 
 namespace app\models;
-
+require_once '../controllers/database.php';
 use app\controllers\ConexxionDBController;
 
 class Cliente
@@ -16,28 +16,14 @@ class Cliente
     public function insertarCliente($nombre, $tipoDoc, $numDoc, $telefono, $email)
     {
         $dbController = new ConexxionDBController();
-
-       
-        $dbController->insertarCliente($nombre, $tipoDoc, $numDoc, $telefono, $email);
-
+        if ($dbController->insertarCliente($nombre, $tipoDoc, $numDoc, $telefono, $email)) {
+            echo "Cliente agregado exitosamente.";
+        } else {
+            echo "Error al agregar el cliente.";
+        }
         $dbController->close();
     }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    $nombreCompleto = $_POST['nombre'] ?? '';
-    $tipoDocumento = $_POST['tipoDoc'] ?? '';
-    $numeroDocumento = $_POST['NumDoc'] ?? '';
-    $telefono = $_POST['telefono'] ?? '';
-    $email = $_POST['email'] ?? '';
-
-    $cliente = new Cliente();
-
-  
-    $cliente->insertarCliente($nombreCompleto, $tipoDocumento, $numeroDocumento, $telefono, $email);
-
-    
-}
 
 ?>
